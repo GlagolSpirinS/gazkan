@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pizda", "pizda\pizda.csproj", "{1CC79355-CE3B-4508-93E5-663F3422BDDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CC79355-CE3B-4508-93E5-663F3422BDDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CC79355-CE3B-4508-93E5-663F3422BDDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CC79355-CE3B-4508-93E5-663F3422BDDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CC79355-CE3B-4508-93E5-663F3422BDDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F429E81-7806-4579-A359-0A9672EB632E}
+	EndGlobalSection
+EndGlobal
