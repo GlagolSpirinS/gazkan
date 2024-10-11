@@ -6,9 +6,6 @@ using System.Windows.Threading;
 
 namespace pizda
 {
-    /// <summary>
-    /// Логика взаимодействия для login.xaml
-    /// </summary>
     public partial class login : Window
     {
         string connectionString = "Server=localhost;Port=5432;Database=pizda;User Id=postgres;Password=123";
@@ -43,7 +40,7 @@ namespace pizda
 
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
-                MessageBox.Show("Please enter both username and password.");
+                MessageBox.Show("Ладно.");
                 return;
             }
 
@@ -56,34 +53,31 @@ namespace pizda
 
                     using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@login", username); // Используем переменную username
+                        command.Parameters.AddWithValue("@login", username);
                         command.Parameters.AddWithValue("@password", password);
 
                         using (NpgsqlDataReader reader = command.ExecuteReader())
                         {
                             if (reader.HasRows)
                             {
-                                MessageBox.Show("Login successful!");
+                                MessageBox.Show("Ты вошёл!");
                                 MainWindow mainWindow = new MainWindow();
                                 mainWindow.Show();
                                 this.Close();
                             }
                             else
                             {
-                                loginAttempts++; // Увеличиваем счетчик попыток
-                                MessageBox.Show("Invalid login or password.");
+                                loginAttempts++; 
+                                MessageBox.Show("иди лесом.");
 
-                                // Если достигнут лимит попыток
                                 if (loginAttempts >= 3)
                                 {
-                                    // Блокируем элементы управления
                                     loginTextBox.IsEnabled = false;
                                     PasswordBox.IsEnabled = false;
                                     LoginButton.IsEnabled = false;
 
-                                    // Запускаем таймер
                                     blockTimer.Start();
-                                    MessageBox.Show("Too many failed attempts. Please wait for 5 seconds.");
+                                    MessageBox.Show("Жди плебей.");
                                 }
                             }
                         }

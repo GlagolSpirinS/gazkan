@@ -43,14 +43,13 @@ namespace pizda
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
 
-                    // Bind the DataTable to the DataGrid
                     UserDataGrid.ItemsSource = dataTable.DefaultView;
 
                     conn.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred: {ex.Message}");
+                    MessageBox.Show($"Я не работаю: {ex.Message}");
                 }
             }
         }
